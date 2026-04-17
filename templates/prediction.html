@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>산불 burned_area 예측</title>
+</head>
+<body>
+  <h1>산불 burned_area 예측</h1>
+  <h2>2021810019 김주완</h2>
+
+  <form action="{{ url_for('prediction') }}" method="post">
+    <label>longitude: <input type="number" step="0.01" name="longitude" required></label><br>
+    <label>latitude: <input type="number" step="0.01" name="latitude" required></label><br>
+
+    <label>month:
+      <select name="month">
+        <option value="01-Jan">01-Jan</option>
+        <option value="02-Feb">02-Feb</option>
+        <option value="03-Mar">03-Mar</option>
+        <option value="04-Apr">04-Apr</option>
+        <option value="05-May">05-May</option>
+        <option value="06-Jun">06-Jun</option>
+        <option value="07-Jul">07-Jul</option>
+        <option value="08-Aug">08-Aug</option>
+        <option value="09-Sep">09-Sep</option>
+        <option value="10-Oct">10-Oct</option>
+        <option value="11-Nov">11-Nov</option>
+        <option value="12-Dec">12-Dec</option>
+      </select>
+    </label><br>
+
+    <label>day:
+      <select name="day">
+        <option value="00-sun">00-sun</option>
+        <option value="01-mon">01-mon</option>
+        <option value="02-tue">02-tue</option>
+        <option value="03-wed">03-wed</option>
+        <option value="04-thu">04-thu</option>
+        <option value="05-fri">05-fri</option>
+        <option value="06-sat">06-sat</option>
+        <option value="07-hol">07-hol</option>
+      </select>
+    </label><br>
+
+    <label>avg_temp: <input type="number" step="0.1" name="avg_temp" required></label><br>
+    <label>max_temp: <input type="number" step="0.1" name="max_temp" required></label><br>
+    <label>max_wind_speed: <input type="number" step="0.1" name="max_wind_speed" required></label><br>
+    <label>avg_wind: <input type="number" step="0.1" name="avg_wind" required></label><br>
+
+    <button type="submit">예측하기</button>
+  </form>
+
+  <a href="/">
+    <button type="button">Home</button>
+</a>
+</body>
+</html>

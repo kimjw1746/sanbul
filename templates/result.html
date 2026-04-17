@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>예측 결과</title>
+</head>
+<body>
+  <h2>2021810019 김주완</h2>
+  <h1>예측 결과</h1>
+
+  <p>입력한 값:</p>
+  <ul>
+    <li>longitude: {{ longitude }}</li>
+    <li>latitude: {{ latitude }}</li>
+    <li>month: {{ month }}</li>
+    <li>day: {{ day }}</li>
+    <li>avg_temp: {{ avg_temp }}</li>
+    <li>max_temp: {{ max_temp }}</li>
+    <li>max_wind_speed: {{ max_wind_speed }}</li>
+    <li>avg_wind: {{ avg_wind }}</li>
+  </ul>
+
+  <h2>예측된 burned_area: {{ burned_area_pred }}</h2>
+
+  <a href="/prediction">
+    <button type="button">예측으로 돌아가기</button>
+</a>
+  <a href="/">
+    <button type="button">Home</button>
+</a>
+</body>
+</html>
